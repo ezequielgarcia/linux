@@ -1,0 +1,12 @@
+git:
+  depth: 3
+language: c
+env:
+  - ARCH=um
+before_install:
+  - sudo apt-get install -y python3 user-mode-linux dmsetup gdisk util-linux
+addons:
+  apt:
+    update: true
+script:
+  - "bash -ex travis-ci.sh"
